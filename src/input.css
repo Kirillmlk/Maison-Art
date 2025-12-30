@@ -17,3 +17,26 @@
   animation: slide-up 0.8s ease-out forwards;
 }
 
+.catalog-header-block {
+  margin-bottom: 60px;
+  padding-bottom: 200px;
+}
+
+.catalog-header-block {
+  margin-bottom: 60px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.catalog-header-block h2 {
+  font-size: 3rem;
+  line-height: 0.9;
+  font-weight: 200;
+}
+
+@media (min-width: 768px) {
+  .catalog-header-block h2 {
+    font-size: 4rem;
+  }
+}
+

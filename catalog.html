@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог - Maison Art</title>
+  <link rel="stylesheet" href="/src/input.css">
+</head>
+<body>
+  <nav class="fixed top-0 w-full z-50 px-6 py-8 md:px-12 flex justify-between items-center transition-all duration-500 bg-white/80 backdrop-blur-md text-black shadow-sm" id="navbar">
+    <a href="/" class="text-xl tracking-[0.4em] serif font-light cursor-pointer">AVESIMYERA</a>
+    
+    <div class="hidden md:flex space-x-12 text-[10px] uppercase tracking-[0.2em] font-medium">
+      <a href="/catalog.html" class="hover:opacity-60 transition-opacity">Коллекции</a>
+      <button class="hover:opacity-60 transition-opacity">Ателье</button>
+      <button class="hover:opacity-60 transition-opacity">Шоурум</button>
+    </div>
+
+    <div class="flex items-center space-x-8">
+      <button onclick="navigateTo('cabinet')" class="hover:scale-110 transition-transform">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+      </button>
+      <button onclick="toggleCart()" class="relative hover:scale-110 transition-transform">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+        <span id="cart-badge" class="absolute -top-2 -right-2 bg-white text-black text-[8px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
+      </button>
+    </div>
+  </nav>
+
+  <section id="view-catalog" class="page-content mt-40 pt-40 pb-12 px-0 animate-slide-up">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <div class="flex justify-between items-start catalog-header-block">
+        <h2 class="serif text-[3rem] md:text-[4rem] italic font-extralight leading-none flex-shrink-0">Каталог</h2>
+        <div class="flex space-x-8 text-[10px] uppercase tracking-widest text-stone-400">
+          <button class="text-black font-bold">Все</button>
+          <button class="hover:text-black">Кровати</button>
+          <button class="hover:text-black">Диваны</button>
+          <button class="hover:text-black">Аксессуары</button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3" style="column-gap: 2rem; row-gap: 5rem;">
+        <div class="group cursor-pointer" onclick="openProduct('velvet-sofa')">
+          <div class="aspect-[4/5] overflow-hidden bg-stone-100 relative mb-6">
+            <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&w=1000" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute bottom-4 right-4 bg-white/80 backdrop-blur px-3 py-1 text-[8px] uppercase tracking-widest">New</div>
+          </div>
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-sm font-medium">Диван "Aurelius"</h3>
+              <p class="text-[9px] uppercase text-stone-400 mt-1 tracking-widest">Ткань Boucle, Массив</p>
+            </div>
+            <span class="text-sm">240 000 ₽</span>
+          </div>
+        </div>
+        <div class="group cursor-pointer" onclick="openProduct('marble-table')">
+          <div class="aspect-[4/5] overflow-hidden bg-stone-100 relative mb-6">
+            <img src="https://images.unsplash.com/photo-1577145789311-50d79e7dcb23?q=80&w=1000" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          </div>
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-sm font-medium">Стол "Luna"</h3>
+              <p class="text-[9px] uppercase text-stone-400 mt-1 tracking-widest">Мрамор Calacatta</p>
+            </div>
+            <span class="text-sm">185 000 ₽</span>
+          </div>
+        </div>
+        <div class="group cursor-pointer">
+          <div class="aspect-[4/5] overflow-hidden bg-stone-100 relative mb-6">
+            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1000" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          </div>
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-sm font-medium">Стул "Ethereal"</h3>
+              <p class="text-[9px] uppercase text-stone-400 mt-1 tracking-widest">Кожа, Орех</p>
+            </div>
+            <span class="text-sm">65 000 ₽</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer-section" class="bg-stone-900 text-white py-24 px-12">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+      <div>
+        <h2 class="serif text-4xl italic mb-6">AVESIMYERA</h2>
+        <p class="text-[10px] uppercase tracking-[0.5em] text-stone-500">Handcrafted in Russia</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-20 text-[10px] uppercase tracking-widest font-medium">
+        <div class="space-y-4">
+          <h5 class="text-stone-500 mb-6">Навигация</h5>
+          <a href="/catalog.html" class="block hover:text-amber-500 transition-colors">Коллекции</a>
+          <a href="#" class="block hover:text-amber-500 transition-colors">Мастерская</a>
+          <a href="#" class="block hover:text-amber-500 transition-colors">Шоурум</a>
+        </div>
+        <div class="space-y-4">
+          <h5 class="text-stone-500 mb-6">Помощь</h5>
+          <a href="#" class="block hover:text-amber-500 transition-colors">Доставка</a>
+          <a href="#" class="block hover:text-amber-500 transition-colors">Замерщик</a>
+          <a href="#" class="block hover:text-amber-500 transition-colors">Гарантия</a>
+        </div>
+        <div class="space-y-4">
+          <h5 class="text-stone-500 mb-6">Соцсети</h5>
+          <a href="#" class="block hover:text-amber-500 transition-colors">Instagram</a>
+          <a href="#" class="block hover:text-amber-500 transition-colors">Telegram</a>
+        </div>
+      </div>
+    </div>
+    <div class="mt-24 pt-8 border-t border-white/5 text-[9px] uppercase tracking-[0.3em] text-stone-600 flex justify-between">
+      <p>© 2024 Atelier Avesimyera. All rights reserved.</p>
+      <p>Made for aesthetic comfort</p>
+    </div>
+  </footer>
+  
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
