@@ -7,11 +7,25 @@
   <link rel="stylesheet" href="/src/input.css">
 </head>
 <body>
-  <div class="min-h-screen bg-gray-100">
-    <h1 class="text-4xl font-bold text-center py-8 text-gray-800">
-      Maison Art
-    </h1>
-  </div>
+  <nav class="fixed top-0 w-full z-50 px-6 py-8 md:px-12 flex justify-between items-center mix-blend-difference text-white transition-all duration-500" id="navbar">
+    <div class="text-xl tracking-[0.4em] serif font-light cursor-pointer" onclick="navigateTo('home')">AVESIMYERA</div>
+    
+    <div class="hidden md:flex space-x-12 text-[10px] uppercase tracking-[0.2em] font-medium">
+      <button onclick="navigateTo('catalog')" class="hover:opacity-60 transition-opacity">Коллекции</button>
+      <button class="hover:opacity-60 transition-opacity">Ателье</button>
+      <button class="hover:opacity-60 transition-opacity">Шоурум</button>
+    </div>
+
+    <div class="flex items-center space-x-8">
+      <button onclick="navigateTo('cabinet')" class="hover:scale-110 transition-transform">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+      </button>
+      <button onclick="toggleCart()" class="relative hover:scale-110 transition-transform">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+        <span id="cart-badge" class="absolute -top-2 -right-2 bg-white text-black text-[8px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
+      </button>
+    </div>
+  </nav>
   <script type="module" src="/src/main.js"></script>
 </body>
 </html>
