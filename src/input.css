@@ -51,3 +51,12 @@
   background-color: #faf9f7;
 }
 
+.catalog-filter-button {
+  color: #a8a29e;
+  transition: color 0.2s ease;
+}
+
+.catalog-filter-button:hover {
+  color: #000;
+}
+
