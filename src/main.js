@@ -29,7 +29,6 @@ window.openProduct = function(productId) {
   window.location.href = '/product-aurelius.html'
 }
 
-// Cart management
 function getCart() {
   const saved = localStorage.getItem('cart')
   return saved ? JSON.parse(saved) : []
@@ -42,14 +41,12 @@ function saveCart(cart) {
 let cart = getCart()
 
 window.addToCart = function(name, price) {
-  // Get product image from the page
   const mainImg = document.getElementById('main-prod-img')
   let imageUrl = 'https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&w=200'
   if (mainImg) {
     imageUrl = mainImg.src.replace('w=1000', 'w=200').replace('q=80&w=1000', 'q=80&w=200')
   }
   
-  // Get material from the page - look for the italic text with material info
   const materialText = document.querySelector('.text-stone-400.italic.leading-relaxed')
   const material = materialText ? materialText.textContent.split('.')[0].trim() : 'Французское Букле'
   
@@ -81,16 +78,13 @@ function updateCartDisplay() {
   
   if (!cartItems || !cartTotal) return
   
-  // Update badge
   if (cartBadge) {
     cartBadge.textContent = cart.length
   }
   
-  // Update total
   const total = cart.reduce((sum, item) => sum + item.price, 0)
   cartTotal.textContent = total.toLocaleString('ru-RU') + ' ₽'
   
-  // Update items list
   if (cart.length === 0) {
     cartItems.innerHTML = '<p class="text-[10px] uppercase tracking-widest text-stone-400 text-center py-20">Ваша корзина пока пуста</p>'
   } else {
@@ -111,7 +105,6 @@ function updateCartDisplay() {
     `).join('')
   }
   
-  // Also update checkout page if it exists
   updateCheckoutDisplay()
 }
 
@@ -122,7 +115,7 @@ function updateCheckoutDisplay() {
   if (!checkoutSummary || !checkoutTotal) return
   
   const total = cart.reduce((sum, item) => sum + item.price, 0)
-  const prepayment = Math.round(total * 0.5) // 50% предоплата
+  const prepayment = Math.round(total * 0.5)
   checkoutTotal.textContent = prepayment.toLocaleString('ru-RU') + ' ₽'
   
   if (cart.length === 0) {
@@ -137,13 +130,11 @@ function updateCheckoutDisplay() {
   }
 }
 
-// Initialize cart display on page load
 document.addEventListener('DOMContentLoaded', () => {
   cart = getCart()
   updateCartDisplay()
   updateCheckoutDisplay()
   
-  // Hide loader after page load
   window.addEventListener('load', () => {
     const loader = document.getElementById('loader')
     if (loader) {
