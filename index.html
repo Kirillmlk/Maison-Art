@@ -1,126 +1,144 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maison Art</title>
-  <link rel="stylesheet" href="/src/input.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maison Art</title>
+    <link rel="stylesheet" href="/src/input.css">
 </head>
 <body>
-  <nav class="fixed top-0 w-full z-50 px-6 py-8 md:px-12 flex justify-between items-center mix-blend-difference text-white transition-all duration-500" id="navbar">
-    <div class="text-xl tracking-[0.4em] serif font-light cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">AVESIMYERA</div>
-    
+<nav class="fixed top-0 w-full z-50 px-6 py-8 md:px-12 flex justify-between items-center mix-blend-difference text-white transition-all duration-500"
+     id="navbar">
+    <div class="text-xl tracking-[0.4em] serif font-light cursor-pointer"
+         onclick="window.scrollTo({top: 0, behavior: 'smooth'})">AVESIMYERA
+    </div>
+
     <div class="hidden md:flex space-x-12 text-xs uppercase tracking-[0.2em] font-medium">
-      <a href="/catalog.html" class="hover:opacity-60 transition-opacity">Коллекции</a>
-      <button class="hover:opacity-60 transition-opacity">Ателье</button>
-      <button class="hover:opacity-60 transition-opacity">Шоурум</button>
+        <a href="/catalog.html" class="hover:opacity-60 transition-opacity">Коллекции</a>
+        <button class="hover:opacity-60 transition-opacity">Ателье</button>
+        <button class="hover:opacity-60 transition-opacity">Шоурум</button>
     </div>
 
     <div class="flex items-center space-x-8">
-      <a href="/profile.html" class="hover:scale-110 transition-transform">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-      </a>
-      <button onclick="toggleCart()" class="relative hover:scale-110 transition-transform">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-        <span id="cart-badge" class="absolute -top-2 -right-2 bg-white text-black text-[8px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
-      </button>
+        <a href="/profile.html" class="hover:scale-110 transition-transform">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+        </a>
+        <button onclick="toggleCart()" class="relative hover:scale-110 transition-transform">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                <path d="M3 6h18"></path>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span id="cart-badge"
+                  class="absolute -top-2 -right-2 bg-white text-black text-[8px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
+        </button>
     </div>
-  </nav>
-  
-  <section id="hero-section" class="h-screen relative flex items-center justify-center bg-stone-900">
-    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000" alt="Hero" class="absolute inset-0 w-full h-full object-cover opacity-60">
+</nav>
+
+<section id="hero-section" class="h-screen relative flex items-center justify-center bg-stone-900">
+    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000" alt="Hero"
+         class="absolute inset-0 w-full h-full object-cover opacity-60">
     <div class="relative z-10 text-center px-6">
-      <h1 class="serif text-7xl md:text-[12rem] text-white italic font-light leading-tight animate-slide-up">Maison d'Art</h1>
-      <p class="text-white/60 text-[10px] uppercase tracking-[0.5em] mt-8 mb-12 animate-slide-up" style="animation-delay: 0.2s">Текстуры, пробуждающие чувства</p>
-      <a href="/catalog.html" class="inline-block border border-white/30 backdrop-blur-md px-12 py-5 text-white text-[9px] uppercase tracking-widest hover:bg-white hover:text-black transition-all animate-slide-up" style="animation-delay: 0.4s">Смотреть каталог</a>
+        <h1 class="serif text-7xl md:text-[12rem] text-white italic font-light leading-tight animate-slide-up">Maison
+            d'Art</h1>
+        <p class="text-white/60 text-[10px] uppercase tracking-[0.5em] mt-8 mb-12 animate-slide-up"
+           style="animation-delay: 0.2s">Текстуры, пробуждающие чувства</p>
+        <a href="/catalog.html"
+           class="inline-block border border-white/30 backdrop-blur-md px-12 py-5 text-white text-[9px] uppercase tracking-widest hover:bg-white hover:text-black transition-all animate-slide-up"
+           style="animation-delay: 0.4s">Смотреть каталог</a>
     </div>
-  </section>
-  
-  <section id="collections-section" class="py-32 px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12">
+</section>
+
+<section id="collections-section" class="py-32 px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12">
     <div class="relative group overflow-hidden bg-stone-200">
-      <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=1200" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
-      <div class="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-all flex items-end p-12">
-        <div class="text-white opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all">
-          <p class="text-[9px] uppercase tracking-widest mb-2">Новая серия</p>
-          <h2 class="serif text-4xl italic">Коллекция Noir</h2>
+        <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=1200"
+             class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+        <div class="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-all flex items-end p-12">
+            <div class="text-white opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all">
+                <p class="text-[9px] uppercase tracking-widest mb-2">Новая серия</p>
+                <h2 class="serif text-4xl italic">Коллекция Noir</h2>
+            </div>
         </div>
-      </div>
     </div>
     <div class="relative group overflow-hidden bg-stone-200">
-      <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=1200" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
-      <div class="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-all flex items-end p-12">
-        <div class="text-white opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all">
-          <p class="text-[9px] uppercase tracking-widest mb-2">Архив</p>
-          <h2 class="serif text-4xl italic">Лимитированные издания</h2>
+        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=1200"
+             class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+        <div class="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-all flex items-end p-12">
+            <div class="text-white opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all">
+                <p class="text-[9px] uppercase tracking-widest mb-2">Архив</p>
+                <h2 class="serif text-4xl italic">Лимитированные издания</h2>
+            </div>
         </div>
-      </div>
     </div>
-  </section>
-  
-  <footer id="footer-section" class="bg-stone-900 text-white py-24 px-12 mt-40">
+</section>
+
+<footer id="footer-section" class="bg-stone-900 text-white py-24 px-12 mt-40">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
-      <div>
-        <h2 class="serif text-4xl italic mb-6">AVESIMYERA</h2>
-        <p class="text-[10px] uppercase tracking-[0.5em] text-stone-500">Handcrafted in Russia</p>
-      </div>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-20 text-[10px] uppercase tracking-widest font-medium">
-        <div class="space-y-4">
-          <h5 class="text-stone-500 mb-6">Навигация</h5>
-          <a href="/catalog.html" class="block hover:text-amber-500 transition-colors">Коллекции</a>
-          <a href="#" class="block hover:text-amber-500 transition-colors">Мастерская</a>
-          <a href="#" class="block hover:text-amber-500 transition-colors">Шоурум</a>
+        <div>
+            <h2 class="serif text-4xl italic mb-6">AVESIMYERA</h2>
+            <p class="text-[10px] uppercase tracking-[0.5em] text-stone-500">Handcrafted in Russia</p>
         </div>
-        <div class="space-y-4">
-          <h5 class="text-stone-500 mb-6">Помощь</h5>
-          <a href="#" class="block hover:text-amber-500 transition-colors">Доставка</a>
-          <a href="#" class="block hover:text-amber-500 transition-colors">Замерщик</a>
-          <a href="#" class="block hover:text-amber-500 transition-colors">Гарантия</a>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-20 text-[10px] uppercase tracking-widest font-medium">
+            <div class="space-y-4">
+                <h5 class="text-stone-500 mb-6">Навигация</h5>
+                <a href="/catalog.html" class="block hover:text-amber-500 transition-colors">Коллекции</a>
+                <a href="#" class="block hover:text-amber-500 transition-colors">Мастерская</a>
+                <a href="#" class="block hover:text-amber-500 transition-colors">Шоурум</a>
+            </div>
+            <div class="space-y-4">
+                <h5 class="text-stone-500 mb-6">Помощь</h5>
+                <a href="#" class="block hover:text-amber-500 transition-colors">Доставка</a>
+                <a href="#" class="block hover:text-amber-500 transition-colors">Замерщик</a>
+                <a href="#" class="block hover:text-amber-500 transition-colors">Гарантия</a>
+            </div>
+            <div class="space-y-4">
+                <h5 class="text-stone-500 mb-6">Соцсети</h5>
+                <a href="#" class="block hover:text-amber-500 transition-colors">Instagram</a>
+                <a href="#" class="block hover:text-amber-500 transition-colors">Telegram</a>
+            </div>
         </div>
-        <div class="space-y-4">
-          <h5 class="text-stone-500 mb-6">Соцсети</h5>
-          <a href="#" class="block hover:text-amber-500 transition-colors">Instagram</a>
-          <a href="#" class="block hover:text-amber-500 transition-colors">Telegram</a>
-        </div>
-      </div>
     </div>
     <div class="mt-24 pt-8 border-t border-white/5 text-[9px] uppercase tracking-[0.3em] text-stone-600 flex justify-between">
-      <p>© 2024 Atelier Avesimyera. All rights reserved.</p>
-      <p>Made for aesthetic comfort</p>
+        <p>© 2024 Atelier Avesimyera. All rights reserved.</p>
+        <p>Made for aesthetic comfort</p>
     </div>
-  </footer>
+</footer>
 
-  <div id="side-cart" class="fixed inset-0 z-[70]">
+<div id="side-cart" class="fixed inset-0 z-[70]">
     <div class="absolute inset-0 bg-black/20 backdrop-blur-sm" onclick="toggleCart()"></div>
     <div class="absolute right-0 top-0 h-full w-full max-w-md bg-white p-12 flex flex-col shadow-2xl">
-      <div class="flex justify-between items-center mb-16">
-        <h3 class="serif text-3xl italic">Корзина</h3>
-        <button onclick="toggleCart()" class="text-stone-400 hover:text-black">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M18 6 6 18M6 6l12 12"></path>
-          </svg>
-        </button>
-      </div>
-
-      <div id="cart-items" class="flex-grow space-y-8 overflow-y-auto pr-4">
-        <p class="text-[10px] uppercase tracking-widest text-stone-400 text-center py-20">
-          Ваша корзина пока пуста
-        </p>
-      </div>
-
-      <div class="pt-8 border-t border-stone-100">
-        <div class="flex justify-between items-end mb-8">
-          <span class="text-[10px] uppercase tracking-[0.2em] text-stone-400">Итоговая стоимость</span>
-          <span class="text-2xl font-light" id="cart-total">0 ₽</span>
+        <div class="flex justify-between items-center mb-16">
+            <h3 class="serif text-3xl italic">Корзина</h3>
+            <button onclick="toggleCart()" class="text-stone-400 hover:text-black">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M18 6 6 18M6 6l12 12"></path>
+                </svg>
+            </button>
         </div>
-        <a href="/checkout.html" onclick="toggleCart();"
-           class="w-full bg-stone-900 text-white py-6 text-[10px] uppercase tracking-[0.3em] hover:bg-amber-900 transition-colors block text-center">
-          Перейти к оформлению
-        </a>
-      </div>
-    </div>
-  </div>
 
-  <script type="module" src="/src/main.js"></script>
+        <div id="cart-items" class="flex-grow space-y-8 overflow-y-auto pr-4">
+            <p class="text-[10px] uppercase tracking-widest text-stone-400 text-center py-20">
+                Ваша корзина пока пуста
+            </p>
+        </div>
+
+        <div class="pt-8 border-t border-stone-100">
+            <div class="flex justify-between items-end mb-8">
+                <span class="text-[10px] uppercase tracking-[0.2em] text-stone-400">Итоговая стоимость</span>
+                <span class="text-2xl font-light" id="cart-total">0 ₽</span>
+            </div>
+            <a href="/checkout.html" onclick="toggleCart();"
+               class="w-full bg-stone-900 text-white py-6 text-[10px] uppercase tracking-[0.3em] hover:bg-amber-900 transition-colors block text-center">
+                Перейти к оформлению
+            </a>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="/src/main.js"></script>
 </body>
 </html>
 

@@ -1,188 +1,198 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Профиль - Maison Art</title>
-  <link rel="stylesheet" href="/src/input.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль - Maison Art</title>
+    <link rel="stylesheet" href="/src/input.css">
 </head>
 <body class="bg-stone-50">
 <nav class="fixed top-0 w-full z-50 px-6 py-8 md:px-12 flex justify-between items-center transition-all duration-500 bg-white/80 backdrop-blur-md text-black shadow-sm"
      id="navbar">
-  <a href="/" class="text-xl tracking-[0.4em] serif font-light cursor-pointer">AVESIMYERA</a>
+    <a href="/" class="text-xl tracking-[0.4em] serif font-light cursor-pointer">AVESIMYERA</a>
 
-  <div class="hidden md:flex space-x-12 text-[10px] uppercase tracking-[0.2em] font-medium">
-    <a href="/catalog.html" class="hover:opacity-60 transition-opacity">Коллекции</a>
-    <button class="hover:opacity-60 transition-opacity">Ателье</button>
-    <button class="hover:opacity-60 transition-opacity">Шоурум</button>
-  </div>
+    <div class="hidden md:flex space-x-12 text-[10px] uppercase tracking-[0.2em] font-medium">
+        <a href="/catalog.html" class="hover:opacity-60 transition-opacity">Коллекции</a>
+        <button class="hover:opacity-60 transition-opacity">Ателье</button>
+        <button class="hover:opacity-60 transition-opacity">Шоурум</button>
+    </div>
 
-  <div class="flex items-center space-x-8">
-    <a href="/profile.html" class="hover:scale-110 transition-transform">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-        <circle cx="12" cy="7" r="4"></circle>
-      </svg>
-    </a>
-    <button onclick="toggleCart()" class="relative hover:scale-110 transition-transform">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
-        <path d="M3 6h18"></path>
-        <path d="M16 10a4 4 0 0 1-8 0"></path>
-      </svg>
-      <span id="cart-badge"
-            class="absolute -top-2 -right-2 bg-white text-black text-[8px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
-    </button>
-  </div>
+    <div class="flex items-center space-x-8">
+        <a href="/profile.html" class="hover:scale-110 transition-transform">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+        </a>
+        <button onclick="toggleCart()" class="relative hover:scale-110 transition-transform">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                <path d="M3 6h18"></path>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span id="cart-badge"
+                  class="absolute -top-2 -right-2 bg-white text-black text-[8px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
+        </button>
+    </div>
 </nav>
 
 <section id="view-cabinet" class="page-content pt-40 px-6 md:px-12 mb-32 animate-slide-up">
-  <div class="max-w-7xl mx-auto">
-    <div class="flex flex-col lg:flex-row gap-20">
-      <!-- User Nav -->
-      <div class="lg:w-1/4">
-        <div class="flex items-center space-x-6 mb-16">
-          <div class="w-16 h-16 rounded-full bg-stone-200 overflow-hidden">
-            <img src="https://i.pravatar.cc/100?u=avesimyera" alt="Client">
-          </div>
-          <div>
-            <h3 class="text-sm font-semibold tracking-wide">Константин А.</h3>
-            <p class="text-[9px] uppercase tracking-widest text-stone-400">Привилегия Silver</p>
-          </div>
+    <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col lg:flex-row gap-20">
+            <!-- User Nav -->
+            <div class="lg:w-1/4">
+                <div class="flex items-center space-x-6 mb-16">
+                    <div class="w-16 h-16 rounded-full bg-stone-200 overflow-hidden">
+                        <img src="https://i.pravatar.cc/100?u=avesimyera" alt="Client">
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold tracking-wide">Константин А.</h3>
+                        <p class="text-[9px] uppercase tracking-widest text-stone-400">Привилегия Silver</p>
+                    </div>
+                </div>
+                <nav class="flex flex-col space-y-6 text-[11px] uppercase tracking-widest font-medium">
+                    <a href="#" class="text-stone-900 border-l-2 border-stone-900 pl-4">Текущие заказы</a>
+                    <a href="#" class="text-stone-400 hover:text-stone-900 pl-4 transition-colors">Архив покупок</a>
+                    <a href="#" class="text-stone-400 hover:text-stone-900 pl-4 transition-colors">Избранное</a>
+                    <a href="#" class="text-stone-400 hover:text-stone-900 pl-4 transition-colors">Настройки</a>
+                </nav>
+            </div>
+
+            <!-- Order Progress Content -->
+            <div class="lg:w-3/4">
+                <h2 class="serif text-4xl italic mb-12">Активные проекты</h2>
+
+                <div class="bg-white border border-stone-100 p-10 shadow-sm rounded-sm">
+                    <div class="flex justify-between items-start mb-12">
+                        <div>
+                            <span class="text-[9px] uppercase tracking-widest text-stone-400">Заказ #AVES-7734</span>
+                            <h4 class="text-2xl serif italic mt-2">Кровать "Ophelia" (Custom)</h4>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-[10px] uppercase text-stone-400 mb-1">Финальный запуск</p>
+                            <p class="text-lg font-light">12 Янв, 2024</p>
+                        </div>
+                    </div>
+
+                    <!-- Progress Bar -->
+                    <div class="mb-16">
+                        <div class="flex justify-between relative mb-4">
+                            <div class="text-center w-10">
+                                <div class="w-3 h-3 rounded-full bg-stone-900 mx-auto mb-2"></div>
+                                <span class="text-[8px] uppercase font-bold">Заказ</span>
+                            </div>
+                            <div class="step-line">
+                                <div class="step-line-filled" style="width: 100%"></div>
+                            </div>
+                            <div class="text-center w-10">
+                                <div class="w-3 h-3 rounded-full bg-stone-900 mx-auto mb-2"></div>
+                                <span class="text-[8px] uppercase font-bold">Раскрой</span>
+                            </div>
+                            <div class="step-line">
+                                <div class="step-line-filled" style="width: 60%"></div>
+                            </div>
+                            <div class="text-center w-10">
+                                <div class="w-3 h-3 rounded-full bg-amber-600 animate-pulse mx-auto mb-2"></div>
+                                <span class="text-[8px] uppercase font-bold text-amber-600">Сборка</span>
+                            </div>
+                            <div class="step-line"></div>
+                            <div class="text-center w-10">
+                                <div class="w-3 h-3 rounded-full bg-stone-100 mx-auto mb-2 border border-stone-200"></div>
+                                <span class="text-[8px] uppercase text-stone-300">ОТК</span>
+                            </div>
+                            <div class="step-line"></div>
+                            <div class="text-center w-10">
+                                <div class="w-3 h-3 rounded-full bg-stone-100 mx-auto mb-2 border border-stone-200"></div>
+                                <span class="text-[8px] uppercase text-stone-300">Доставка</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-stone-50 p-8 flex flex-col md:flex-row justify-between items-center gap-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="p-3 bg-white rounded-full">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9A7B4F"
+                                     stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-[10px] uppercase tracking-widest font-bold">Статус цеха №2</p>
+                                <p class="text-xs text-stone-500 italic mt-1">Основание собрано, начата подготовка к
+                                    обивке.</p>
+                            </div>
+                        </div>
+                        <button class="text-[10px] uppercase tracking-widest font-bold border-b border-black pb-1 hover:text-stone-500 transition-colors">
+                            Связаться с менеджером
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <nav class="flex flex-col space-y-6 text-[11px] uppercase tracking-widest font-medium">
-          <a href="#" class="text-stone-900 border-l-2 border-stone-900 pl-4">Текущие заказы</a>
-          <a href="#" class="text-stone-400 hover:text-stone-900 pl-4 transition-colors">Архив покупок</a>
-          <a href="#" class="text-stone-400 hover:text-stone-900 pl-4 transition-colors">Избранное</a>
-          <a href="#" class="text-stone-400 hover:text-stone-900 pl-4 transition-colors">Настройки</a>
-        </nav>
-      </div>
-
-      <!-- Order Progress Content -->
-      <div class="lg:w-3/4">
-        <h2 class="serif text-4xl italic mb-12">Активные проекты</h2>
-        
-        <div class="bg-white border border-stone-100 p-10 shadow-sm rounded-sm">
-          <div class="flex justify-between items-start mb-12">
-            <div>
-              <span class="text-[9px] uppercase tracking-widest text-stone-400">Заказ #AVES-7734</span>
-              <h4 class="text-2xl serif italic mt-2">Кровать "Ophelia" (Custom)</h4>
-            </div>
-            <div class="text-right">
-              <p class="text-[10px] uppercase text-stone-400 mb-1">Финальный запуск</p>
-              <p class="text-lg font-light">12 Янв, 2024</p>
-            </div>
-          </div>
-
-          <!-- Progress Bar -->
-          <div class="mb-16">
-            <div class="flex justify-between relative mb-4">
-              <div class="text-center w-10">
-                <div class="w-3 h-3 rounded-full bg-stone-900 mx-auto mb-2"></div>
-                <span class="text-[8px] uppercase font-bold">Заказ</span>
-              </div>
-              <div class="step-line"><div class="step-line-filled" style="width: 100%"></div></div>
-              <div class="text-center w-10">
-                <div class="w-3 h-3 rounded-full bg-stone-900 mx-auto mb-2"></div>
-                <span class="text-[8px] uppercase font-bold">Раскрой</span>
-              </div>
-              <div class="step-line"><div class="step-line-filled" style="width: 60%"></div></div>
-              <div class="text-center w-10">
-                <div class="w-3 h-3 rounded-full bg-amber-600 animate-pulse mx-auto mb-2"></div>
-                <span class="text-[8px] uppercase font-bold text-amber-600">Сборка</span>
-              </div>
-              <div class="step-line"></div>
-              <div class="text-center w-10">
-                <div class="w-3 h-3 rounded-full bg-stone-100 mx-auto mb-2 border border-stone-200"></div>
-                <span class="text-[8px] uppercase text-stone-300">ОТК</span>
-              </div>
-              <div class="step-line"></div>
-              <div class="text-center w-10">
-                <div class="w-3 h-3 rounded-full bg-stone-100 mx-auto mb-2 border border-stone-200"></div>
-                <span class="text-[8px] uppercase text-stone-300">Доставка</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-stone-50 p-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex items-center space-x-4">
-              <div class="p-3 bg-white rounded-full">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9A7B4F" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-              </div>
-              <div>
-                <p class="text-[10px] uppercase tracking-widest font-bold">Статус цеха №2</p>
-                <p class="text-xs text-stone-500 italic mt-1">Основание собрано, начата подготовка к обивке.</p>
-              </div>
-            </div>
-            <button class="text-[10px] uppercase tracking-widest font-bold border-b border-black pb-1 hover:text-stone-500 transition-colors">Связаться с менеджером</button>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
 </section>
 
 <footer id="footer-section" class="bg-stone-900 text-white py-24 px-12 mt-40">
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
-    <div>
-      <h2 class="serif text-4xl italic mb-6">AVESIMYERA</h2>
-      <p class="text-[10px] uppercase tracking-[0.5em] text-stone-500">Handcrafted in Russia</p>
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+        <div>
+            <h2 class="serif text-4xl italic mb-6">AVESIMYERA</h2>
+            <p class="text-[10px] uppercase tracking-[0.5em] text-stone-500">Handcrafted in Russia</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-20 text-[10px] uppercase tracking-widest font-medium">
+            <div class="space-y-4">
+                <h5 class="text-stone-500 mb-6">Навигация</h5>
+                <a href="/catalog.html" class="block hover:text-amber-500 transition-colors">Коллекции</a>
+                <a href="#" class="block hover:text-amber-500 transition-colors">Мастерская</a>
+                <a href="#" class="block hover:text-amber-500 transition-colors">Шоурум</a>
+            </div>
+            <div class="space-y-4">
+                <h5 class="text-stone-500 mb-6">Помощь</h5>
+                <a href="#" class="block hover:text-amber-500 transition-colors">Доставка</a>
+                <a href="#" class="block hover:text-amber-500 transition-colors">Замерщик</a>
+                <a href="#" class="block hover:text-amber-500 transition-colors">Гарантия</a>
+            </div>
+            <div class="space-y-4">
+                <h5 class="text-stone-500 mb-6">Соцсети</h5>
+                <a href="#" class="block hover:text-amber-500 transition-colors">Instagram</a>
+                <a href="#" class="block hover:text-amber-500 transition-colors">Telegram</a>
+            </div>
+        </div>
     </div>
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-20 text-[10px] uppercase tracking-widest font-medium">
-      <div class="space-y-4">
-        <h5 class="text-stone-500 mb-6">Навигация</h5>
-        <a href="/catalog.html" class="block hover:text-amber-500 transition-colors">Коллекции</a>
-        <a href="#" class="block hover:text-amber-500 transition-colors">Мастерская</a>
-        <a href="#" class="block hover:text-amber-500 transition-colors">Шоурум</a>
-      </div>
-      <div class="space-y-4">
-        <h5 class="text-stone-500 mb-6">Помощь</h5>
-        <a href="#" class="block hover:text-amber-500 transition-colors">Доставка</a>
-        <a href="#" class="block hover:text-amber-500 transition-colors">Замерщик</a>
-        <a href="#" class="block hover:text-amber-500 transition-colors">Гарантия</a>
-      </div>
-      <div class="space-y-4">
-        <h5 class="text-stone-500 mb-6">Соцсети</h5>
-        <a href="#" class="block hover:text-amber-500 transition-colors">Instagram</a>
-        <a href="#" class="block hover:text-amber-500 transition-colors">Telegram</a>
-      </div>
+    <div class="mt-24 pt-8 border-t border-white/5 text-[9px] uppercase tracking-[0.3em] text-stone-600 flex justify-between">
+        <p>© 2024 Atelier Avesimyera. All rights reserved.</p>
+        <p>Made for aesthetic comfort</p>
     </div>
-  </div>
-  <div class="mt-24 pt-8 border-t border-white/5 text-[9px] uppercase tracking-[0.3em] text-stone-600 flex justify-between">
-    <p>© 2024 Atelier Avesimyera. All rights reserved.</p>
-    <p>Made for aesthetic comfort</p>
-  </div>
 </footer>
 
 <div id="side-cart" class="fixed inset-0 z-[70]">
-  <div class="absolute inset-0 bg-black/20 backdrop-blur-sm" onclick="toggleCart()"></div>
-  <div class="absolute right-0 top-0 h-full w-full max-w-md bg-white p-12 flex flex-col shadow-2xl">
-    <div class="flex justify-between items-center mb-16">
-      <h3 class="serif text-3xl italic">Корзина</h3>
-      <button onclick="toggleCart()" class="text-stone-400 hover:text-black">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M18 6 6 18M6 6l12 12"></path>
-        </svg>
-      </button>
-    </div>
+    <div class="absolute inset-0 bg-black/20 backdrop-blur-sm" onclick="toggleCart()"></div>
+    <div class="absolute right-0 top-0 h-full w-full max-w-md bg-white p-12 flex flex-col shadow-2xl">
+        <div class="flex justify-between items-center mb-16">
+            <h3 class="serif text-3xl italic">Корзина</h3>
+            <button onclick="toggleCart()" class="text-stone-400 hover:text-black">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M18 6 6 18M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
 
-    <div id="cart-items" class="flex-grow space-y-8 overflow-y-auto pr-4">
-      <p class="text-[10px] uppercase tracking-widest text-stone-400 text-center py-20">
-        Ваша корзина пока пуста
-      </p>
-    </div>
+        <div id="cart-items" class="flex-grow space-y-8 overflow-y-auto pr-4">
+            <p class="text-[10px] uppercase tracking-widest text-stone-400 text-center py-20">
+                Ваша корзина пока пуста
+            </p>
+        </div>
 
-    <div class="pt-8 border-t border-stone-100">
-      <div class="flex justify-between items-end mb-8">
-        <span class="text-[10px] uppercase tracking-[0.2em] text-stone-400">Итоговая стоимость</span>
-        <span class="text-2xl font-light" id="cart-total">0 ₽</span>
-      </div>
-      <a href="/checkout.html" onclick="toggleCart();"
-         class="w-full bg-stone-900 text-white py-6 text-[10px] uppercase tracking-[0.3em] hover:bg-amber-900 transition-colors block text-center">
-        Перейти к оформлению
-      </a>
+        <div class="pt-8 border-t border-stone-100">
+            <div class="flex justify-between items-end mb-8">
+                <span class="text-[10px] uppercase tracking-[0.2em] text-stone-400">Итоговая стоимость</span>
+                <span class="text-2xl font-light" id="cart-total">0 ₽</span>
+            </div>
+            <a href="/checkout.html" onclick="toggleCart();"
+               class="w-full bg-stone-900 text-white py-6 text-[10px] uppercase tracking-[0.3em] hover:bg-amber-900 transition-colors block text-center">
+                Перейти к оформлению
+            </a>
+        </div>
     </div>
-  </div>
 </div>
 
 <script type="module" src="/src/main.js"></script>
