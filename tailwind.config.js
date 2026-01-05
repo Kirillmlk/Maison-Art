@@ -3,6 +3,7 @@ export default {
     "./index.html",
     "./catalog.html",
     "./product-aurelius.html",
+    "./checkout.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {

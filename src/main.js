@@ -7,6 +7,8 @@ window.navigateTo = function(page) {
     console.log('Navigate to cabinet')
   } else if (page === 'home') {
     window.location.href = '/'
+  } else if (page === 'checkout') {
+    window.location.href = '/checkout.html'
   }
 }
 
@@ -58,6 +60,7 @@ window.addToCart = function(name, price) {
 window.removeFromCart = function(index) {
   cart.splice(index, 1)
   updateCartDisplay()
+  updateCheckoutDisplay()
 }
 
 function updateCartDisplay() {
@@ -96,10 +99,36 @@ function updateCartDisplay() {
       </div>
     `).join('')
   }
+  
+  // Also update checkout page if it exists
+  updateCheckoutDisplay()
+}
+
+function updateCheckoutDisplay() {
+  const checkoutSummary = document.getElementById('checkout-summary')
+  const checkoutTotal = document.getElementById('checkout-total')
+  
+  if (!checkoutSummary || !checkoutTotal) return
+  
+  const total = cart.reduce((sum, item) => sum + item.price, 0)
+  const prepayment = Math.round(total * 0.5) // 50% предоплата
+  checkoutTotal.textContent = prepayment.toLocaleString('ru-RU') + ' ₽'
+  
+  if (cart.length === 0) {
+    checkoutSummary.innerHTML = '<p class="text-[10px] uppercase tracking-widest text-stone-400 text-center py-10">Корзина пуста</p>'
+  } else {
+    checkoutSummary.innerHTML = cart.map((item) => `
+      <div class="flex justify-between text-[11px] uppercase tracking-widest">
+        <span class="text-stone-400">${item.name}</span>
+        <span>${item.price.toLocaleString('ru-RU')}&nbsp;₽</span>
+      </div>
+    `).join('')
+  }
 }
 
 // Initialize cart display on page load
 document.addEventListener('DOMContentLoaded', () => {
   updateCartDisplay()
+  updateCheckoutDisplay()
 })
 
