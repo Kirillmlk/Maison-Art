@@ -25,6 +25,7 @@
 }
 
 .catalog-header-block {
+  padding-top: 4rem;
   margin-bottom: 60px;
   padding-bottom: 50px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -44,5 +45,9 @@
 
 .serif {
   font-family: 'Cormorant Garamond', serif;
+}
+
+#view-catalog {
+  background-color: #faf9f7;
 }
 

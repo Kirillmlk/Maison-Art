@@ -6,7 +6,7 @@
   <title>Каталог - Maison Art</title>
   <link rel="stylesheet" href="/src/input.css">
 </head>
-<body>
+<body class="bg-stone-50">
   <nav class="fixed top-0 w-full z-50 px-6 py-8 md:px-12 flex justify-between items-center transition-all duration-500 bg-white/80 backdrop-blur-md text-black shadow-sm" id="navbar">
     <a href="/" class="text-xl tracking-[0.4em] serif font-light cursor-pointer">AVESIMYERA</a>
     
@@ -27,9 +27,9 @@
     </div>
   </nav>
 
-  <section id="view-catalog" class="page-content mt-40 pt-40 pb-12 px-0 animate-slide-up">
-    <div class="max-w-7xl mx-auto px-6 md:px-12">
-      <div class="flex justify-between items-start catalog-header-block">
+  <section id="view-catalog" class="page-content mt-24 pb-12 px-0 animate-slide-up min-h-screen">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 pt-40">
+      <div class="flex justify-between items-start catalog-header-block mt-16">
         <h2 class="serif text-[3rem] md:text-[4rem] italic font-extralight leading-none flex-shrink-0">Каталог</h2>
         <div class="flex space-x-8 text-[10px] uppercase tracking-widest text-stone-400">
           <button class="text-black font-bold">Все</button>
@@ -39,7 +39,7 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3" style="column-gap: 2rem; row-gap: 5rem;">
+      <div class="grid grid-cols-1 md:grid-cols-3 mt-16" style="column-gap: 2rem; row-gap: 5rem;">
         <div class="group cursor-pointer" onclick="openProduct('velvet-sofa')">
           <div class="aspect-[4/5] overflow-hidden bg-stone-100 relative mb-6">
             <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&w=1000" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
