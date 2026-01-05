@@ -30,7 +30,16 @@ window.openProduct = function(productId) {
 }
 
 // Cart management
-let cart = []
+function getCart() {
+  const saved = localStorage.getItem('cart')
+  return saved ? JSON.parse(saved) : []
+}
+
+function saveCart(cart) {
+  localStorage.setItem('cart', JSON.stringify(cart))
+}
+
+let cart = getCart()
 
 window.addToCart = function(name, price) {
   // Get product image from the page
@@ -53,12 +62,14 @@ window.addToCart = function(name, price) {
   }
   
   cart.push(product)
+  saveCart(cart)
   updateCartDisplay()
   toggleCart()
 }
 
 window.removeFromCart = function(index) {
   cart.splice(index, 1)
+  saveCart(cart)
   updateCartDisplay()
   updateCheckoutDisplay()
 }
@@ -128,6 +139,7 @@ function updateCheckoutDisplay() {
 
 // Initialize cart display on page load
 document.addEventListener('DOMContentLoaded', () => {
+  cart = getCart()
   updateCartDisplay()
   updateCheckoutDisplay()
 })
