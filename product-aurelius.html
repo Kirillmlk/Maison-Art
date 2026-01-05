@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurelius Sofa - Maison Art</title>
+  <link rel="stylesheet" href="/src/input.css">
+</head>
+<body class="bg-stone-50">
+<nav class="fixed top-0 w-full z-50 px-6 py-8 md:px-12 flex justify-between items-center transition-all duration-500 bg-white/80 backdrop-blur-md text-black shadow-sm"
+     id="navbar">
+  <a href="/" class="text-xl tracking-[0.4em] serif font-light cursor-pointer">AVESIMYERA</a>
+
+  <div class="hidden md:flex space-x-12 text-[10px] uppercase tracking-[0.2em] font-medium">
+    <a href="/catalog.html" class="hover:opacity-60 transition-opacity">Коллекции</a>
+    <button class="hover:opacity-60 transition-opacity">Ателье</button>
+    <button class="hover:opacity-60 transition-opacity">Шоурум</button>
+  </div>
+
+  <div class="flex items-center space-x-8">
+    <button onclick="navigateTo('cabinet')" class="hover:scale-110 transition-transform">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+        <circle cx="12" cy="7" r="4"></circle>
+      </svg>
+    </button>
+    <button onclick="toggleCart()" class="relative hover:scale-110 transition-transform">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+        <path d="M3 6h18"></path>
+        <path d="M16 10a4 4 0 0 1-8 0"></path>
+      </svg>
+      <span id="cart-badge"
+            class="absolute -top-2 -right-2 bg-white text-black text-[8px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
+    </button>
+  </div>
+</nav>
+
+<section id="view-product" class="page-content pt-40 px-6 md:px-12 animate-slide-up">
+  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20">
+    <!-- Gallery -->
+    <div class="lg:w-1/2 space-y-4">
+      <div class="aspect-square bg-stone-100 overflow-hidden">
+        <img id="main-prod-img"
+             src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&w=1000"
+             class="w-full h-full object-cover">
+      </div>
+      <div class="grid grid-cols-4 gap-4">
+        <div class="aspect-square bg-stone-100 cursor-pointer border border-stone-800 p-1">
+          <img
+            src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&w=200"
+            class="w-full h-full object-cover">
+        </div>
+        <div class="aspect-square bg-stone-100 cursor-pointer">
+          <img
+            src="https://images.unsplash.com/photo-1616486341353-c5833215bad9?q=80&w=200"
+            class="w-full h-full object-cover">
+        </div>
+        <div class="aspect-square bg-stone-100 cursor-pointer">
+          <img
+            src="https://images.unsplash.com/photo-1617099404995-0a5a7c6c5242?q=80&w=200"
+            class="w-full h-full object-cover">
+        </div>
+        <div class="aspect-square bg-stone-100 cursor-pointer">
+          <img
+            src="https://images.unsplash.com/photo-1616485828670-5855f2b2593e?q=80&w=200"
+            class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+
+    <!-- Config -->
+    <div class="lg:w-1/2">
+      <nav class="text-[9px] uppercase tracking-widest text-stone-400 mb-8">Каталог / Диваны / Aurelius</nav>
+      <h1 class="serif text-5xl italic mb-4">Aurelius Sofa</h1>
+      <p class="text-2xl font-light mb-12">240 000 ₽</p>
+
+      <div class="space-y-12 border-t border-stone-100 pt-10">
+        <!-- Option: Fabric -->
+        <div>
+          <h4 class="text-[10px] uppercase tracking-widest font-bold mb-6">Материал обивки</h4>
+          <div class="flex space-x-4">
+            <button class="w-10 h-10 rounded-full bg-[#E8E4E1] color-selector active"></button>
+            <button class="w-10 h-10 rounded-full bg-[#5D5D5B] color-selector"></button>
+            <button class="w-10 h-10 rounded-full bg-[#2C2C2B] color-selector"></button>
+          </div>
+          <p class="text-[9px] text-stone-400 mt-4 italic leading-relaxed">
+            Французское букле с грязеотталкивающей пропиткой. <br>Плотность: 520 г/м²
+          </p>
+        </div>
+
+        <!-- Option: Size -->
+        <div>
+          <h4 class="text-[10px] uppercase tracking-widest font-bold mb-6">Конфигурация</h4>
+          <div class="grid grid-cols-2 gap-4">
+            <button class="border border-stone-800 p-4 text-[10px] uppercase tracking-widest">
+              Двухместный (220см)
+            </button>
+            <button class="border border-stone-100 p-4 text-[10px] uppercase tracking-widest hover:border-black transition-all">
+              Трёхместный (280см)
+            </button>
+          </div>
+        </div>
+
+        <div class="pt-10 flex gap-4">
+          <button onclick="addToCart('Диван Aurelius', 240000)"
+                  class="flex-grow bg-stone-900 text-white py-6 text-[10px] uppercase tracking-[0.3em] hover:bg-stone-800 transition-all">
+            Добавить в корзину
+          </button>
+          <button class="p-6 border border-stone-200 hover:border-black transition-all">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+              <path
+                d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.505 4.046 3 5.5L12 21l7-7Z"></path>
+            </svg>
+          </button>
+        </div>
+
+        <div class="bg-stone-50 p-6 flex justify-between items-center">
+          <p class="text-[9px] uppercase tracking-widest text-stone-500 italic">
+            Изготовление под заказ: 21–35 дней
+          </p>
+          <a href="#" class="text-[9px] uppercase underline tracking-widest">Условия доставки</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="footer-section" class="bg-stone-900 text-white py-24 px-12 mt-40">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+    <div>
+      <h2 class="serif text-4xl italic mb-6">AVESIMYERA</h2>
+      <p class="text-[10px] uppercase tracking-[0.5em] text-stone-500">Handcrafted in Russia</p>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-20 text-[10px] uppercase tracking-widest font-medium">
+      <div class="space-y-4">
+        <h5 class="text-stone-500 mb-6">Навигация</h5>
+        <a href="/catalog.html" class="block hover:text-amber-500 transition-colors">Коллекции</a>
+        <a href="#" class="block hover:text-amber-500 transition-colors">Мастерская</a>
+        <a href="#" class="block hover:text-amber-500 transition-colors">Шоурум</a>
+      </div>
+      <div class="space-y-4">
+        <h5 class="text-stone-500 mb-6">Помощь</h5>
+        <a href="#" class="block hover:text-amber-500 transition-colors">Доставка</a>
+        <a href="#" class="block hover:text-amber-500 transition-colors">Замерщик</a>
+        <a href="#" class="block hover:text-amber-500 transition-colors">Гарантия</a>
+      </div>
+      <div class="space-y-4">
+        <h5 class="text-stone-500 mb-6">Соцсети</h5>
+        <a href="#" class="block hover:text-amber-500 transition-colors">Instagram</a>
+        <a href="#" class="block hover:text-amber-500 transition-colors">Telegram</a>
+      </div>
+    </div>
+  </div>
+  <div class="mt-24 pt-8 border-t border-white/5 text-[9px] uppercase tracking-[0.3em] text-stone-600 flex justify-between">
+    <p>© 2024 Atelier Avesimyera. All rights reserved.</p>
+    <p>Made for aesthetic comfort</p>
+  </div>
+</footer>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
+
+
