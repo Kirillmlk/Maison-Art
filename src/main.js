@@ -13,7 +13,14 @@ window.navigateTo = function(page) {
 window.toggleCart = function() {
   const cart = document.getElementById('side-cart')
   if (!cart) return
-  cart.classList.toggle('hidden')
+  
+  if (cart.classList.contains('cart-open')) {
+    cart.classList.remove('cart-open')
+    document.body.style.overflow = ''
+  } else {
+    cart.classList.add('cart-open')
+    document.body.style.overflow = 'hidden'
+  }
 }
 
 window.openProduct = function(productId) {

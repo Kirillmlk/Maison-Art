@@ -71,4 +71,33 @@
   color: #a8a29e;
 }
 
+#side-cart {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#side-cart.cart-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#side-cart > div:first-child {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateX(100%);
+}
+
+#side-cart.cart-open > div:first-child {
+  transform: translateX(0);
+}
+
+#side-cart > div:last-child {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateX(100%);
+}
+
+#side-cart.cart-open > div:last-child {
+  transform: translateX(0);
+}
+
 
