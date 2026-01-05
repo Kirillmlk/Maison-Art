@@ -1,0 +1,12 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/catalog", "destination": "/catalog.html" },
+    { "source": "/product-aurelius", "destination": "/product-aurelius.html" },
+    { "source": "/checkout", "destination": "/checkout.html" },
+    { "source": "/profile", "destination": "/profile.html" }
+  ]
+}
+
