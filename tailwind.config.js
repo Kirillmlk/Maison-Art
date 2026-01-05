@@ -4,6 +4,7 @@ export default {
     "./catalog.html",
     "./product-aurelius.html",
     "./checkout.html",
+    "./profile.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
