@@ -142,5 +142,15 @@ document.addEventListener('DOMContentLoaded', () => {
   cart = getCart()
   updateCartDisplay()
   updateCheckoutDisplay()
+  
+  // Hide loader after page load
+  window.addEventListener('load', () => {
+    const loader = document.getElementById('loader')
+    if (loader) {
+      setTimeout(() => {
+        loader.classList.add('hidden')
+      }, 300)
+    }
+  })
 })
 
