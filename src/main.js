@@ -11,16 +11,12 @@ window.navigateTo = function(page) {
 }
 
 window.toggleCart = function() {
-  console.log('Toggle cart')
+  const cart = document.getElementById('side-cart')
+  if (!cart) return
+  cart.classList.toggle('hidden')
 }
 
 window.openProduct = function(productId) {
-  console.log('Opening product:', productId)
   window.location.href = '/product-aurelius.html'
 }
-
-// Убеждаемся, что функция доступна глобально
-document.addEventListener('DOMContentLoaded', () => {
-  console.log('openProduct function available:', typeof window.openProduct)
-})
 
