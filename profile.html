@@ -36,55 +36,86 @@
   </div>
 </nav>
 
-<section id="view-profile" class="page-content pt-40 px-6 md:px-12 animate-slide-up min-h-screen">
-  <div class="max-w-5xl mx-auto py-20">
-    <h1 class="serif text-5xl italic mb-16">Профиль</h1>
-    
-    <div class="space-y-16">
-      <!-- Personal Info -->
-      <div>
-        <h2 class="text-sm uppercase tracking-widest mb-8">Личная информация</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
-            <input type="text" placeholder="Имя" class="w-full border-b border-stone-200 py-3 text-sm focus:outline-none focus:border-black transition-colors">
+<section id="view-cabinet" class="page-content pt-40 px-6 md:px-12 mb-32 animate-slide-up">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex flex-col lg:flex-row gap-20">
+      <!-- User Nav -->
+      <div class="lg:w-1/4">
+        <div class="flex items-center space-x-6 mb-16">
+          <div class="w-16 h-16 rounded-full bg-stone-200 overflow-hidden">
+            <img src="https://i.pravatar.cc/100?u=avesimyera" alt="Client">
           </div>
           <div>
-            <input type="text" placeholder="Фамилия" class="w-full border-b border-stone-200 py-3 text-sm focus:outline-none focus:border-black transition-colors">
-          </div>
-          <div>
-            <input type="email" placeholder="Email" class="w-full border-b border-stone-200 py-3 text-sm focus:outline-none focus:border-black transition-colors">
-          </div>
-          <div>
-            <input type="tel" placeholder="Телефон" class="w-full border-b border-stone-200 py-3 text-sm focus:outline-none focus:border-black transition-colors">
+            <h3 class="text-sm font-semibold tracking-wide">Константин А.</h3>
+            <p class="text-[9px] uppercase tracking-widest text-stone-400">Привилегия Silver</p>
           </div>
         </div>
+        <nav class="flex flex-col space-y-6 text-[11px] uppercase tracking-widest font-medium">
+          <a href="#" class="text-stone-900 border-l-2 border-stone-900 pl-4">Текущие заказы</a>
+          <a href="#" class="text-stone-400 hover:text-stone-900 pl-4 transition-colors">Архив покупок</a>
+          <a href="#" class="text-stone-400 hover:text-stone-900 pl-4 transition-colors">Избранное</a>
+          <a href="#" class="text-stone-400 hover:text-stone-900 pl-4 transition-colors">Настройки</a>
+        </nav>
       </div>
 
-      <!-- Address -->
-      <div>
-        <h2 class="text-sm uppercase tracking-widest mb-8">Адрес доставки</h2>
-        <div class="space-y-6">
-          <div>
-            <input type="text" placeholder="Адрес" class="w-full border-b border-stone-200 py-3 text-sm focus:outline-none focus:border-black transition-colors">
-          </div>
-          <div class="grid grid-cols-2 gap-8">
+      <!-- Order Progress Content -->
+      <div class="lg:w-3/4">
+        <h2 class="serif text-4xl italic mb-12">Активные проекты</h2>
+        
+        <div class="bg-white border border-stone-100 p-10 shadow-sm rounded-sm">
+          <div class="flex justify-between items-start mb-12">
             <div>
-              <input type="text" placeholder="Город" class="w-full border-b border-stone-200 py-3 text-sm focus:outline-none focus:border-black transition-colors">
+              <span class="text-[9px] uppercase tracking-widest text-stone-400">Заказ #AVES-7734</span>
+              <h4 class="text-2xl serif italic mt-2">Кровать "Ophelia" (Custom)</h4>
             </div>
-            <div>
-              <input type="text" placeholder="Индекс" class="w-full border-b border-stone-200 py-3 text-sm focus:outline-none focus:border-black transition-colors">
+            <div class="text-right">
+              <p class="text-[10px] uppercase text-stone-400 mb-1">Финальный запуск</p>
+              <p class="text-lg font-light">12 Янв, 2024</p>
             </div>
           </div>
-        </div>
-      </div>
 
-      <!-- Orders History -->
-      <div>
-        <h2 class="text-sm uppercase tracking-widest mb-8">История заказов</h2>
-        <div class="space-y-6">
-          <p class="text-[10px] uppercase tracking-widest text-stone-400 text-center py-20">
-            У вас пока нет заказов
-          </p>
+          <!-- Progress Bar -->
+          <div class="mb-16">
+            <div class="flex justify-between relative mb-4">
+              <div class="text-center w-10">
+                <div class="w-3 h-3 rounded-full bg-stone-900 mx-auto mb-2"></div>
+                <span class="text-[8px] uppercase font-bold">Заказ</span>
+              </div>
+              <div class="step-line"><div class="step-line-filled" style="width: 100%"></div></div>
+              <div class="text-center w-10">
+                <div class="w-3 h-3 rounded-full bg-stone-900 mx-auto mb-2"></div>
+                <span class="text-[8px] uppercase font-bold">Раскрой</span>
+              </div>
+              <div class="step-line"><div class="step-line-filled" style="width: 60%"></div></div>
+              <div class="text-center w-10">
+                <div class="w-3 h-3 rounded-full bg-amber-600 animate-pulse mx-auto mb-2"></div>
+                <span class="text-[8px] uppercase font-bold text-amber-600">Сборка</span>
+              </div>
+              <div class="step-line"></div>
+              <div class="text-center w-10">
+                <div class="w-3 h-3 rounded-full bg-stone-100 mx-auto mb-2 border border-stone-200"></div>
+                <span class="text-[8px] uppercase text-stone-300">ОТК</span>
+              </div>
+              <div class="step-line"></div>
+              <div class="text-center w-10">
+                <div class="w-3 h-3 rounded-full bg-stone-100 mx-auto mb-2 border border-stone-200"></div>
+                <span class="text-[8px] uppercase text-stone-300">Доставка</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-stone-50 p-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center space-x-4">
+              <div class="p-3 bg-white rounded-full">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9A7B4F" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <div>
+                <p class="text-[10px] uppercase tracking-widest font-bold">Статус цеха №2</p>
+                <p class="text-xs text-stone-500 italic mt-1">Основание собрано, начата подготовка к обивке.</p>
+              </div>
+            </div>
+            <button class="text-[10px] uppercase tracking-widest font-bold border-b border-black pb-1 hover:text-stone-500 transition-colors">Связаться с менеджером</button>
+          </div>
         </div>
       </div>
     </div>
