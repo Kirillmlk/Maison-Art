@@ -49,6 +49,8 @@
 
 #view-catalog {
   background-color: #faf9f7;
+  padding-bottom: 160px;
+  margin-bottom: -160px;
 }
 
 .catalog-filter-button {
@@ -59,4 +61,14 @@
 .catalog-filter-button:hover {
   color: #000;
 }
+
+.catalog-image-container {
+  width: 380px;
+  height: 430px;
+}
+
+.catalog-product-description {
+  color: #a8a29e;
+}
+
 
