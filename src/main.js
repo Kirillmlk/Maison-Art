@@ -15,6 +15,12 @@ window.toggleCart = function() {
 }
 
 window.openProduct = function(productId) {
-  console.log('Open product:', productId)
+  console.log('Opening product:', productId)
+  window.location.href = '/product-aurelius.html'
 }
+
+// Убеждаемся, что функция доступна глобально
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('openProduct function available:', typeof window.openProduct)
+})
 
